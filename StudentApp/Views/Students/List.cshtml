@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List< StudentApp.Models.Entites.Student>
+
+<h1>Students</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var student in Model)
+        {
+           <tr>@student.Id</tr>
+            <tr>@student.Name</tr>
+            <tr>@student.Email</tr>
+            <tr>
+                <a>Edit</a>
+            </tr>
+        }
+    </tbody>
+
+</table>
